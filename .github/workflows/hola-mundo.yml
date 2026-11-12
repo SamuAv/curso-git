@@ -1,0 +1,17 @@
+name: Hola Mundo Java
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:   # permite ejecutarlo manualmente desde la pestaña Actions
+
+jobs:
+  ejecutar-hola-mundo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hacer checkout al repositorio
+        uses: actions/checkout@v4
+
+      - name: Ejecutar el script
+        run: java hola-mundo.java
