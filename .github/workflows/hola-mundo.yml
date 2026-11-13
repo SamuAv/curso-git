@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Ejecutar el script
-        run: java hola-mundo.java
+        run: java hola_mundo.java
