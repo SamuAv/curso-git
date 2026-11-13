@@ -6,7 +6,7 @@ on:
   workflow_dispatch:   # permite ejecutarlo manualmente desde la pestaña Actions
 
 jobs:
-  ejecutar-hola-mundo:
+  ejecutar-hola_mundo:
     runs-on: ubuntu-latest
 
     steps:
