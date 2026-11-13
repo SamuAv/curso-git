@@ -1,0 +1,24 @@
+name: contexto
+run-name: Implementacion de Contextos
+
+on: push
+
+jobs:
+    info_basica:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Mostrar información del Repositorio
+              run: |
+                    echo "Nombre del Repositorio: ${{ github.repository }}"
+                    echo "Nombre del Evento: ${{ github.event_name }}"
+                    echo "Nombre del Branch: ${{ github.ref }}"
+                    echo "SHA del Commit: ${{ github.sha }}"
+                    echo "Actor que disparó el evento: ${{ github.actor }}"
+                    echo "Nombre del Workflow: ${{ github.workflow }}"
+                    echo "Job ID: ${{ github.job }}"
+
+            - name: Otros Contextos
+              run: |
+                    echo "Runner OS: ${{ runner.os }}"
+                    echo "Runner Arch: ${{ runner.arch }}"
+                    echo "Estatus del Job: ${{ job.status }}"
