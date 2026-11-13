@@ -12,11 +12,10 @@ on:
       - '**.java'
 
   pull_request:
-    types:
-      [opened, labeled]
-      branches:
+    types: [opened, labeled]
+    branches:
         - main
-      paths:
+    paths:
         - '**.java'
 
   issues:
@@ -31,9 +30,8 @@ on:
         description: 'Nivel1'
         required: false
         default: medio
-        type:
-          choise: choise
-          options:
+        type: choice
+        options:
             - bajo
             - medio
 
@@ -54,7 +52,8 @@ jobs:
 
       - name: Mostrar nivel de alerta
         if: github.event_name == 'workflow_dispatch'
-        run: echo "Nivel de alerta: ${{ inputs.alerta }}"
+        run: |
+          echo "Nivel de alerta: ${{ inputs.alerta }}"
 
       - name: Ejecutar el script
         run: java hola_mundo.java
