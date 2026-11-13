@@ -1,7 +1,5 @@
 name: Hola Mundo Java
 
-run-name: estoy aprendiendo github actions
-
 on:
   push:
     branches: [ main ]
