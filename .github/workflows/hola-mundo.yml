@@ -1,6 +1,6 @@
 name: Hola Mundo Java
 
-run-name: aprendiendo github actions
+run-name: estoy aprendiendo github actions
 
 on:
   push:
